@@ -3,3 +3,4 @@ dataset/
 models/
 log/
 test.py
+*.pyc

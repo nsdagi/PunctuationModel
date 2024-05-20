@@ -12,7 +12,8 @@ class ErnieLinear(nn.Layer):
         self.ernie = ErnieForTokenClassification.from_pretrained(
             pretrained_token, num_classes=num_classes, **kwargs)
 
-        self.num_classes = self.ernie.num_classes
+        # self.num_classes = self.ernie.num_classes
+        self.num_classes = self.ernie.num_labels
         self.softmax = nn.Softmax()
 
     def forward(self, input_ids, token_type_ids=None):
@@ -33,7 +34,7 @@ class ErnieLinearExport(nn.Layer):
         self.ernie = ErnieForTokenClassification.from_pretrained(
             pretrained_token, num_classes=num_classes, **kwargs)
 
-        self.num_classes = self.ernie.num_classes
+        self.num_classes = self.ernie.num_labels
         self.softmax = nn.Softmax()
 
     def forward(self, input_ids, token_type_ids=None):
