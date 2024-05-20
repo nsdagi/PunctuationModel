@@ -7,6 +7,10 @@
  1. 安装PaddlePaddle的GPU版本，命令如下，如果已经安装过了，请忽略。
 ```shell
 conda install paddlepaddle-gpu==2.3.2 cudatoolkit=10.2 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
+```shell
+或使用Docker运行环境
+```
+docker run --name paddle-2.5.0 -it --gpus all paddlepaddle/paddle:2.5.0-gpu-cuda11.7-cudnn8.4-trt8.4
 ```
 
 2. 安装PaddleNLP工具，命令如下。
